@@ -8,17 +8,17 @@
 </head>
 <body>
     <p>Nhập số</p>
-    <input type="number">
-    <button onclick="kiemtra()" >Kiểm tra</button>
+    <input type="number" id="number">
+    <button onclick="kiemtra()">Kiểm tra</button>
 </body>
 </html>
 <script>
     function kiemtra() {
         let a = document.getElementById("number").value;
-        If (a % 2==0) {
-        alert ("a là số chẵn")
-    }   else {
-        alert("a là số lẻ")
+        if(a % 2==0) {
+            alert(a + " là số chẵn.");
+    }   else{
+            alert(a + " là số lẻ.");
     }
-    }
+}
 </script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="width: 190px; height: 190px; border: 1px solid black; ; position: relative" id="battleFiled">
+        <div style="top: 19px; left: 0px;width: 19px; height: 19px; background-image: url(https://img.pikbest.com/58pic/33/75/07/69t58PIC8xSfv58PICcc5qZMg_PIC2018.png!c1024wm0/compress/true/progressive/true/format/webp/fw/1024);background-size: 100% 100%;position: absolute;"id="tank">
+    </div>
+        <div style="top: 38px; left: 76px;width: 19px; height: 19px; background-image: url(https://cdn.pixabay.com/photo/2018/04/10/10/38/boom-3307008_1280.png);background-size: 100% 100%;position: absolute;"id="boom">
+    </div>
+
+    
+    <button onclick="MoveUp()">len</button>
+    <button onclick="bottom_tank()">xuong</button>
+    <button onclick="left_tank()">trai</button>
+    <button onclick="right_tank()">phai</button>
+</body>
+</html>
+<script>
+    let tank = document.getElementById("tank");
+    let boom = document.getElementById("boom");
+    let top_boom = parseInt(boom.style["top"]);
+    let left_boom = parseInt(boom.style["left"])
+
+    function MoveUp(){
+        let top_tank = parseInt(tank.style["top"]);
+        let left_tank = parseInt(tank.style["left"]);
+        tank.style["top"] = top_tank - 19 + "px"
+
+        let top_tank = parseInt(tank.style["top"]);
+        let left_tank = parseInt(tank.style["left"]);
+
+        if (top_tank == top_boom && left_tank == left_boom){
+            tank.style.backgroundImage = "url('https://media.istockphoto.com/vectors/boom-effect-vector-id916028398')"
+            tank.style.zIndex = 1;
+        }
+    } 
+</script>
