@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin-left: 0px;
+        text-align: center;
+
+
+    }
+</style>
+<body>
+    <h1>Tính chỉ số cân nặng của cơ thể </h1>
+    <br><br>
+    <input type="number" name="" id="cannang" placeholder="Nhập cân nặng (kg)">
+    <br><br>
+    <input type="number" name="" id="chieucao" placeholder="Nhập chiều cao (m)">
+    <br><br>
+    <button onclick="kiemtra()">Kiểm tra</button>
+    <br><br>
+    <div id="result">Kết quả là:</div>
+</body>
+</html>
+<script>
+    function kiemtra(){
+        let cannang = document.getElementById("cannang").value;
+        let chieucao = document.getElementById("chieucao").value;
+        let bmi = cannang / ( Math.pow(chieucao, 2) );
+        let result = '';
+
+        if (bmi > 40)
+            result = "béo phì cấp độ 3"
+        else if (35 <= bmi )
+            result = "béo phì cấp độ 2"
+        else if (30 <= bmi)
+            result = "béo phì cấp độ 1"
+        else if (25 <= bmi)
+            result = "thừa cân"
+        else if (18.5 <= bmi)
+            result = "bình thường"
+        else if (17 <= bmi )
+            result = "gầy cấp độ 1"
+        else if (16 <= bmi)
+            result = "gầy cấp độ 2"
+        else if (bmi < 16)
+            result = "gầy cấp độ 3"
+        document.getElementById("result").innerHTML = "Chỉ số BMI là: " + bmi + ". " + "Bạn " +result  ;
+    }
+</script>
