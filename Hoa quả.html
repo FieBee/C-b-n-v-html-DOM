@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Giá hoa quả</h1>
 
@@ -15,35 +17,30 @@
 
     <div id="ketqua"></div>
 </body>
+
 </html>
 <script>
-    function giahoaqua(){
+    function giahoaqua() {
         let bbb = document.getElementById("hoaqua").value;
-        let ketqua = document.getElementById("ketqua").innerHTML;            
-        switch(bbb){
-                case 'Ổi':
-                    document.write("20000 VNĐ/kg");
-                    break;
-                case 'Dưa hấu':
-                    document.write("20000 VNĐ/kg");
-                    break;
-                case 'Táo':
-                    document.write("30000 VNĐ/kg");
-                    break;
-                case 'Xoài':
-                    document.write("30000 VNĐ/kg");
-                    break;
-                case 'Cam':
-                    document.write("40000 VNĐ/kg");
-                    break;
-                case 'Chôm chôm':
-                    document.write("40000 VNĐ/kg");
-                    break;
-                case 'Măng cụt':
-                    document.write("50000 VNĐ/kg");
-                    break;
-                default:
-                    document.write("Hết hàng");
-            } 
+        let ketqua = document.getElementById("ketqua").innerHTML;
+        switch (bbb) {
+            case 'Ổi':
+            case 'Dưa hấu':
+                document.write("20000 VNĐ/kg");
+                break;
+            case 'Táo':
+            case 'Xoài':
+                document.write("30000 VNĐ/kg");
+                break;
+            case 'Cam':
+            case 'Chôm chôm':
+                document.write("40000 VNĐ/kg");
+                break;
+            case 'Măng cụt':
+                document.write("50000 VNĐ/kg");
+                break;
+            default:
+                document.write("Hết hàng");
+        }
     }
 </script>
